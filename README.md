@@ -1,3 +1,7 @@
+NOTE: This is a fork of https://bitbucket.org/cfyzium/bearlibterminal. I recommend you use that instead.
+
+---
+
 BearLibTerminal provides a pseudoterminal window with a grid of character cells and a simple yet powerful API for flexible textual output and uncomplicated input processing.
 
 ### Features
@@ -45,7 +49,7 @@ Depending on the OS and Python installation, you might also want to
 Package contains both wrapper and an appropriate binary for the platform, so you do not need to copy anything else anywhere. Just import the library in the source:
 
     from bearlibterminal import terminal
-    
+
     terminal.open()
     terminal.printf(2, 1, "Hello, world!")
     terminal.refresh()
@@ -60,17 +64,21 @@ in a suitable location (e. g. in the same directory as script). For Linux you'll
 to just 'BearLibTerminal.so' (dropping the 'lib' prefix). After that it would be possible to import the library
 the usual way:
 
-    local terminal = require "BearLibTerminal" 
+    local terminal = require "BearLibTerminal"
 
 ### Building
 
 BearLibTerminal is a language-agnostic dynamic-link library (.dll/.so/.dylib), therefore you generally do not have
 to build it yourself and may simply use the [prebuilt binaries](http://foo.wyrd.name/en:bearlibterminal#download).
 
-To build BearLibTerminal you will need CMake and a recent GCC/MinGW compiler. For Linux any GCC version 4.6.3 and above
+To build BearLibTerminal you will need CMake and a recent GCC/MinGW compiler. For Linux/OSX any GCC version 4.6.3 and above
 will do. For Windows there are several MinGW builds with various quirks, using [TDM-GCC](http://tdm-gcc.tdragon.net/) or
 [mingw-builds](http://mingw-w64.org/doku.php/download/mingw-builds) (a flavour of mingw-w64) is recommended.
 MinGW compiler MUST use Posix thread model.
+
+#### OSX
+
+Run the `build.sh` script.
 
 
 ### License
